@@ -1,0 +1,12 @@
+MEX {
+	global:
+		mexFunction;
+		mexfilerequiredapiversion;
+		emlrtMexFcnProperties;
+		material_box_initialize;
+		material_box_terminate;
+		material_box_atexit;
+		material_box;
+	local:
+		*;
+};

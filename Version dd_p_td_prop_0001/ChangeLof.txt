@@ -1,0 +1,41 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------Change Log of Version dd_p_td_0921_1 -------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Algorithm has been recoded in a time discrete fashion. However, in the process of doing so, the parameter \rho_k is now defined differently. 
+In the previous (non time discrete) versions,
+the parameter was defined as
+
+\rho_k = sign(\phi_k) 
+
+now it is defined as 
+\rho_k = -sign(sig_k-sig_k_nm1) 
+where sig_k_nm1 is the stress in this element of the previous time step.
+Rho therefore now detects a maximum/minimum of the load-reversal point instead of the sign of the load-reversal stress. 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------Change Log of Version dd_p_td_1021_1 -------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Algorithm has been made capable of multiple load cycles in time discrete fashion. First results look very promising. Note, that the algorithm detects a load reversal
+only on a global state. That means, the algorithm looks for a load-reversel in the first element of the input and then assumes that, if a load-reversal is found, all 
+other elements also undergo a load reversal. This may be subject of change in the future.
+Important Note: The algorithm does not work properly with "old" data-sets (Version dsc_mc_0921 or older). THe new data-sets include all the data of data-sets with less 
+load reversals. That is for 3 load-reversals, the data-set also contains the data for 2 and 1 load-reversal.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------Change Log of Version dd_p_td_1221_1 -------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Algorithm was changed in the following way: Before a load-reversal is present, the history surrogate is identical to the current stress strain state. By doing so rho 
+can be calculated for the new history surrogate via
+\rho_k = sig_k - phi_k, where sig_k is the current stress and phi_k is the stress of the PAST history surrogate. This way the propagator can calculate via
+\eta_k = H(q_k,\eta_{k-1}) 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------Change Log of Version dd_p_td_0122_1 -------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Algorithm is identical to dd_p_td_1221_1 but the code was cleaned. Also, rho now indicates if the maximum or minimum was reached following a positive slope (1, --> maximum) or
+a negative slope (-1, --> minimum).  Therefore, rho does not encode the sign of the extremum anymore --> Therefore, for the distance function, no abs() function must be used! 
+In older versions, this might not be the case!!!
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------Change Log of Version dd_p_prop_0001 -------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This code aims to combine all previous implementations into one central code. This code shall then be the basis for further extensions.

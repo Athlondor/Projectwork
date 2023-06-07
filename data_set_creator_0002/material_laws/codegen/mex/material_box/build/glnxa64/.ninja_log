@@ -1,0 +1,11 @@
+# ninja log v5
+1	55	1677063632229685385	build/glnxa64/c_mexapi_version.o	1be222f1bc524a67
+0	56	1677063632230685409	build/glnxa64/rt_nonfinite.o	a30bb56f921173d7
+0	58	1677063632232685457	build/glnxa64/material_box_data.o	6bafe603d2ed865a
+0	59	1677063632233685481	build/glnxa64/material_box_initialize.o	9bcdb3fcc4cbaeaa
+0	61	1677063632236685553	build/glnxa64/material_box_terminate.o	8181c58d15a9f265
+1	61	1677063632236685553	build/glnxa64/_coder_material_box_info.o	dd65de99316f40ea
+1	64	1677063632238685600	build/glnxa64/_coder_material_box_mex.o	2d408c86f7660e77
+0	64	1677063632238685600	build/glnxa64/material_box.o	a2c1effbf9d269c3
+0	77	1677063632251685911	build/glnxa64/_coder_material_box_api.o	5be453b3c23628b8
+77	141	1677063632314687419	material_box_mex.mexa64	8394a80989d36b55

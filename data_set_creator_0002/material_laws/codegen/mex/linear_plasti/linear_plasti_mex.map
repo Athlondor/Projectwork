@@ -1,0 +1,12 @@
+MEX {
+	global:
+		mexFunction;
+		mexfilerequiredapiversion;
+		emlrtMexFcnProperties;
+		linear_plasti_initialize;
+		linear_plasti_terminate;
+		linear_plasti_atexit;
+		linear_plasti;
+	local:
+		*;
+};

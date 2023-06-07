@@ -1,0 +1,37 @@
+Project_Name
+nnp 8
+ndim 2
+nen 2
+nel 13
+coordinates start
+1       0.7519     0.010284
+2      0.74161     -0.29824
+3      0.32254      -0.2751
+4     0.093713   -0.0077131
+5     -0.21481     -0.28024
+6      -0.4462     0.005142
+7     -0.70588    0.0077131
+8     -0.71102     -0.26996
+coordinates end
+connectivities start
+1 8 6
+2 6 5
+3 5 4
+4 4 3
+5 3 1
+6 1 2
+7 2 3
+8 3 5
+9 5 8
+10 8 7
+11 7 6
+12 6 4
+13 4 1
+connectivities end
+Dirichlet start
+7 1 1            0            0
+8 1 1            0            0
+Dirichlet end
+Neumann start
+2            0           -2
+Neumann end

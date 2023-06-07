@@ -1,0 +1,22 @@
+Project_Name
+nnp 3
+ndim 2
+nen 2
+nel 2
+coordinates start
+1            0            0
+2            2  	  0
+3            4            0
+coordinates end
+connectivities start
+1 1 2
+2 2 3
+connectivities end
+Dirichlet start
+1 1 1            0            0
+2 0 1            0            0
+3 0 1            0            0
+Dirichlet end
+Neumann start
+3          2          0
+Neumann end

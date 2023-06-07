@@ -1,0 +1,29 @@
+Project_Name
+nnp 6
+ndim 2
+nen 2
+nel 6
+coordinates start
+1            0          0.5
+2            0            0
+3            1          0.5
+4            1            0
+5            2          0.5
+6            2            0
+coordinates end
+connectivities start
+1 2 4
+2 4 6
+3 6 5
+4 5 3
+5 3 1
+6 1 2
+connectivities end
+Dirichlet start
+1 1 0            0            0
+2 1 1            0            0
+5 1 0          0.1            0
+6 1 0          0.1            0
+Dirichlet end
+Neumann start
+Neumann end

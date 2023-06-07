@@ -1,0 +1,24 @@
+!!!Does not functions with dd_plasti Code versions of dd_p_fix_0421_1 or older or dd_p_td_0921_1 or older  !!!!!!!!
+
+In this Version the calculation of the "\rho" parameter is still as defined in Version_dsc_mc_0921:
+
+If the "End"strain is identical to the maximum prescribed strain (that is there is no load-reversal) then rho is
+
+-1 for positive strains
+1 for negative strains
+
+It has been deemed to be more consistent with the theory, because "rho" shall be an indicator for the PREVIOUS load-reversal point. And if one starts from zero and then does not reverse the laoding, then the zero is the previous load-reversal point. And if the slope is positive then the zero was a minimum and if the slope is negative, the zero has been a maxmimum.... 
+
+To-Do : Also save Data before X-Load-reversal points are reached. If n_cycle is e.g. 2, then also save the data when both extrema are at 0, then save all data when one load-reversal point is reached - that is one extrema is still 0, the other is not.
+!! THIS TO-DO NOW HAS BEEN TACKLED IN THIS VERSION
+What the algorithm does essentially is, that is starts with the algorithm for (e.g.) n_cycle = 3, then runs it for n_cycle = 2, then n_cycle =1. The newly calced values are extended with 0 and are added at the end of the data-set!
+
+E.g.: n_cyc= 3
+Algorithm starts with calculating all entries where phi_i and tau_i are unequal to 0. 
+Then it runs the same algorithm but for n_cyc = 2. Phi_1 and tau_1 are set to 0 for this calculation.
+Then it runs the algorithm for n_cyc = 1. Phi_1,tau_1, Phi_2,tau_2 are set to 0 for this calculation.
+(Notice: In the algorithm for n_cyc = 1, the case where no load-reversal is present (n_cyc=0) is already included).
+----------------------------------------------------------------------------------------------------------------------------------------
+
+23.05.2022: Updated the Plasticity Material model: Now uses a closed analytical solutions which renders the model more resistent to bigger time steps
+

@@ -1,0 +1,13 @@
+mesh 'FEM_MESH' dimension 2 Elemtype Line Nnode 2
+
+#Node x y
+coordinates
+1   0.00000   0.00000
+2   2.00000   0.00000
+end coordinates
+
+#ElementX node1 node2 igp
+elements
+1 1 2 1
+end elements
+

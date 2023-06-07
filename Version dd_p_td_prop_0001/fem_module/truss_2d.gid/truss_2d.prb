@@ -1,0 +1,23 @@
+PROBLEM DATA
+QUESTION: Load_curve2_time1
+VALUE: 0
+QUESTION: Load_curve2_time2
+VALUE: 1
+QUESTION: Load_curve2_time3
+VALUE: 0
+QUESTION: Load_curve2_time4
+VALUE: 0
+QUESTION: Load_curve2_value1
+VALUE: 0
+QUESTION: Load_curve2_value2
+VALUE: 1
+QUESTION: Load_curve2_value3
+VALUE: 0
+QUESTION: Load_curve2_value4
+VALUE: 0
+QUESTION: total_time
+VALUE: 1
+QUESTION: timestep
+VALUE: 0.1
+IMAGE: loadcurve_explanation.gif
+END GENERAL DATA
