@@ -1,4 +1,8 @@
 function [hist_surr_new,koeff_matrix] = propagator(eps_k,sig_k,hist_surr,hist_flag,init_flag,past_time)
+
+% init_flag == 1:
+%    BEDEUTUNG UND WAS DER CODE IM FOLGENDEN AUSFÜHRT
+
 if init_flag == 1
     switch hist_flag
         case 1 % stress, strain and rho are saved (from EVERY load-reversal) (max 10 load-reversal)
