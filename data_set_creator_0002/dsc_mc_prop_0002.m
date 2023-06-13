@@ -56,6 +56,7 @@ close all;
 clear;
 addpath('helper_functions','material_laws','propagator','propagators');
 dir = pwd;
+
 %% Settings
 reduced_flag = 1;           % 0 or 1
 epsilon_max = 1.5*10^(-2);  % (positive) Double
